@@ -1,0 +1,28 @@
+<h1>Create new post</h1>
+
+<form action="/:post_id" method="POST">
+  <label for="Title">Title:</label>
+  <input id="Title" type="text" name="post[title]" value="<%= @post.try(:title) %>">
+  <br>
+  <label for="Description">Description::</label>
+  <input id="Description" type="text" name="post[description]" value="<%= @post.try(:description) %>">
+  <br>
+  <label for="Email">Email:</label>
+  <input id="Email" type="text" name="post[email]" value="<%= @post.try(:email) %>"><br>
+  <br>
+  <label for="Category">Category:</label>
+  <input id="Category" type="integer" name="post[category_id]" value="<%= @post.try(:category_id) %>">
+  <br>
+  <!-- <select name="my list">
+    <option value= "2" category_id=2>Cars</option>
+    <option value= "3" category_id=3>Jobs</option>
+    <option value= "1" category_id=1>Misc</option>
+  </select>
+  <br -->
+  <br>
+  <input type="submit" value="Post!">
+</form>
+
+
+
+

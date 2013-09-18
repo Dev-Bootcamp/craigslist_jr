@@ -1,0 +1,11 @@
+<h1><%= @post.title %></h1>
+
+<p><%= @post.description %>
+<p>If you are interested, please contact the post owner at: <%= @post.email %></p>
+
+<a href="/">Return to Home</a>
+<br>
+<br>
+
+<form action="/:post_id" method="POST">
+<input type="submit" value="Remove!">

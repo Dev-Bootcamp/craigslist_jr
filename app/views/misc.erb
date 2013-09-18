@@ -1,0 +1,10 @@
+<h1>Misc</h1>
+
+<ul>
+  <% @misc.each do |post| %>
+    <li><a href="/<%= post.id%>"><%= post.title %></a></li>
+  <% end %>
+</ul>
+
+<a href="/new">Add a Post</a><br>
+<a href="/">Return to Home</a>
