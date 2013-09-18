@@ -29,6 +29,12 @@ get '/:post_id' do
   erb :post
 end
 
+get '/:post_id/remove' do
+  @post = Post.find(params[:post_id])
+  @post.destroy
+  redirect to ('/')
+end 
+
 # POST +++++++++++++++++++++++++++++++++++++++++++++++++
 
 post '/:post_id' do
@@ -36,8 +42,4 @@ post '/:post_id' do
   erb :post
 end 
 
-post '/:post_id' do
-  @post = Post.find(params[:post_id])
-  @post.destroy
-  redirect to ('/')
-end 
+
